@@ -59,3 +59,10 @@ const html = `
   </body>
 </html>
 `
+
+app.get("/saludo/:nombre", (req, res)=>{
+  saludo = {'message': `Hola ${req.params.nombre}!!!`};
+  res.type('json');
+
+  res.json(saludo)
+})
